@@ -1,0 +1,23 @@
+<div class="search-area">
+    <input type="text" [(ngModel)] = "input_value" (keyup.enter) = "filter()">
+    <button (click) = "input_value = '';tableDisplay =this.data" > clear </button>
+</div>
+<div class="table-area">
+    <table>
+        <tr>
+          <th>Sl. No.</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Balance</th>
+          <th>Company</th>
+        </tr>
+        <tr *ngFor="let item of tableDisplay; let i = index">
+          <th>{{i+1}}</th>
+          <th > <a routerLink="/{{item.name}}" (click) ="update(item)" >{{item.name}}</a></th>
+          <th>{{item.age}}</th>
+          <th>{{item.balance}}</th>
+          <th>{{item.company}}</th>
+        </tr>
+       
+      </table>
+</div>
