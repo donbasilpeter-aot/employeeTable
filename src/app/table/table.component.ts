@@ -83,6 +83,7 @@ export class TableComponent implements OnInit {
 
   constructor(private dataTransfer : DataTransferService) {
     this.tableDisplay= this.data;
+    this.tableDisplay.sort((a:any, b:any) => parseFloat(b.age) - parseFloat(a.age));
  
   }
 
@@ -100,8 +101,12 @@ export class TableComponent implements OnInit {
       if(((eachElement.company).toLocaleLowerCase()).includes((this.input_value).toLocaleLowerCase())){
         this.tableDisplay.push(eachElement)
       }
+    
       
     });
+    this.tableDisplay.sort((a:any, b:any) => parseFloat(b.age) - parseFloat(a.age));
+
+
 
   }
 
