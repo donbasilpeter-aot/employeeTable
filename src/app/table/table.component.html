@@ -1,6 +1,8 @@
-<div class="search-area">
-    <input type="text" [(ngModel)] = "input_value" (keyup.enter) = "filter()">
-    <button (click) = "input_value = '';tableDisplay =this.data" > clear </button>
+<div class="page">
+
+  <div class="search-area">
+    <input type="text" [(ngModel)] = "input_value" (keyup.enter) = "filter()" placeholder="Enter the company Name...">
+    <button (click) = "input_value = '';tableDisplay =this.data"  ><i class="fa fa-search"></i> clear </button>
 </div>
 <div class="table-area">
     <table>
@@ -12,12 +14,16 @@
           <th>Company</th>
         </tr>
         <tr *ngFor="let item of tableDisplay; let i = index">
-          <th>{{i+1}}</th>
-          <th > <a routerLink="/{{item.name}}" (click) ="update(item)" >{{item.name}}</a></th>
-          <th>{{item.age}}</th>
-          <th>{{item.balance}}</th>
-          <th>{{item.company}}</th>
+          <td>{{i+1}}</td>
+          <td > <a routerLink="/{{item.name}}" (click) ="update(item)" >{{item.name}}</a></td>
+          <td>{{item.age}}</td>
+          <td>{{item.balance}}</td>
+          <td>{{item.company}}</td>
         </tr>
        
       </table>
+</div>
+
+
+
 </div>

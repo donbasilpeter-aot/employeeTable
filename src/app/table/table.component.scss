@@ -1,0 +1,75 @@
+$buttonBg : #5E6478;
+$buttonHoverBg : #2F4858;
+$tableBg : rgb(47,72,88,90%);
+
+
+.page{
+    position: relative;
+    text-align: center;
+}
+
+.search-area{
+    margin-top: 7em;
+    margin-bottom: 3em;
+
+}
+
+.search-area input {
+    border-radius: .3em;
+    position: relative;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid $buttonBg;
+    width: 20%;
+    background: #f1f1f1;
+  }
+  
+  /* Style the submit button */
+  .search-area button {
+      margin-left: 2px;
+      border-radius: .3em;
+    
+    width: 5em;
+    padding: 10px;
+    background: $buttonBg;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+
+  .search-area  button:hover {
+    background: $buttonHoverBg;
+  }
+  
+
+  .table-area table{
+      padding: 2em;
+      position: relative;
+    background-color: $tableBg ;
+    width: 50%;
+    border-radius: 1em;
+    color: #f1f1f1;
+   
+  }
+
+  .table-area table th{
+    padding: .5em;
+    background: $buttonBg;
+    border-radius: .4em;
+
+}
+  .table-area table td{
+      padding: .5em;
+      background: rgb(255,238,231,10%);
+      border-radius: .6em;
+
+  }
+
+  a{
+      color: #DDC7C8;
+      text-decoration: none;
+
+  }
+  
